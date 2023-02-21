@@ -1,5 +1,4 @@
 let iconPassword = document.querySelectorAll(".icon-password");
-
     iconPassword.forEach(function(icon) {
     icon.addEventListener("click", function() {
         const target = icon.getAttribute("data-type");
@@ -13,17 +12,14 @@ let iconPassword = document.querySelectorAll(".icon-password");
         }
     });
 }); 
-
-//  Сравнение введенных пароля и подтверждения пароля.
-
 const btnConfirm = document.querySelector(".btn");
 
 btnConfirm.addEventListener("click", (event) => {
   const password = document.getElementById("input-password").value;
   const passwordConfirm = document.getElementById("confirm-password").value;
-
-  event.preventDefault();
-
+ 
+    event.preventDefault();
+    
   if(password === "" || passwordConfirm === "") {
     errorOutput("Поля не повинні бути пусті!");    
   }
